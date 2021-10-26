@@ -11,6 +11,8 @@ struct ContentView: View {
     @State var show : Bool = false
     @State var viewState : CGSize = .zero
     @State var showCard : Bool = false
+    @State var bottomState : CGSize = .zero
+    @State var showFull : Bool = false
     
     var body: some View {
         ZStack{
@@ -24,7 +26,7 @@ struct ContentView: View {
                         .delay(0.1)
                 )
             
-           
+            
             BackCardView()
                 .frame(width: showCard ? 300 : 340, height: 220)
                 .background(show ? Color("card3") : Color("card4"))
@@ -73,18 +75,44 @@ struct ContentView: View {
                         viewState = value.translation
                         show = true
                     }
-                    .onEnded{ value in
-                        viewState = .zero
-                        show = false
-                    }
+                        .onEnded{ value in
+                            viewState = .zero
+                            show = false
+                        }
                 )
-               
+            
             
             
             BottomCardView()
                 .offset(x: 0, y: showCard ? 360 : 1000)
+                .offset(y: bottomState.height)
                 .blur(radius: show ? 20 : 0)
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+                .gesture(
+                    DragGesture().onChanged{ value in
+                        bottomState = value.translation
+                        if showFull {
+                            bottomState.height += -300
+                        }
+                        if bottomState.height < -300 {
+                            bottomState.height = -300
+                        }
+                        
+                    }
+                        .onEnded{value in
+                            if bottomState.height > 50 {
+                                showCard = false
+                            }
+                            if (bottomState.height < -100  && !showFull) || (bottomState.height < -250 && showFull){
+                                bottomState.height = -300
+                                showFull = true
+                            }else {
+                                bottomState = .zero
+                                showFull = false
+                            }
+                            
+                        }
+                )
             
             
         }
