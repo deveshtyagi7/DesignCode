@@ -17,6 +17,7 @@
 		105D367827291FA900DE267F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D367727291FA900DE267F /* Home.swift */; };
 		106CBCEC2737ACE50060E991 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CBCEB2737ACE50060E991 /* Modifiers.swift */; };
 		106CBCF02737CC190060E991 /* Work_Sans in Resources */ = {isa = PBXBuildFile; fileRef = 106CBCEF2737CC190060E991 /* Work_Sans */; };
+		106CBCF52737E30B0060E991 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CBCF42737E30B0060E991 /* CourseList.swift */; };
 		108FA5C1272FFAFE000F5EC5 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108FA5C0272FFAFE000F5EC5 /* UpdateList.swift */; };
 		108FA5C327300302000F5EC5 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108FA5C227300302000F5EC5 /* UpdateDetail.swift */; };
 		10CE8BC7272819250088B60E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE8BC6272819250088B60E /* MenuView.swift */; };
@@ -38,6 +39,7 @@
 		106CBCF12737CC710060E991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		106CBCF22737CD990060E991 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
 		106CBCF32737CD9F0060E991 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		106CBCF42737E30B0060E991 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		108FA5C0272FFAFE000F5EC5 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		108FA5C227300302000F5EC5 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		10CE8BC6272819250088B60E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				10CE8BC6272819250088B60E /* MenuView.swift */,
 				105D367727291FA900DE267F /* Home.swift */,
 				10E9F02F27296DC10030E62B /* HomeView.swift */,
+				106CBCF42737E30B0060E991 /* CourseList.swift */,
 				106CBCF22737CD990060E991 /* WorkSans-Bold.ttf */,
 				106CBCF32737CD9F0060E991 /* WorkSans-Regular.ttf */,
 				1053E1BF2726859D0080737F /* Assets.xcassets */,
@@ -178,6 +181,7 @@
 				106CBCEC2737ACE50060E991 /* Modifiers.swift in Sources */,
 				102D93E12730111B00130DA0 /* TabBar.swift in Sources */,
 				108FA5C327300302000F5EC5 /* UpdateDetail.swift in Sources */,
+				106CBCF52737E30B0060E991 /* CourseList.swift in Sources */,
 				1053E1BE272685980080737F /* ContentView.swift in Sources */,
 				10CE8BC7272819250088B60E /* MenuView.swift in Sources */,
 				108FA5C1272FFAFE000F5EC5 /* UpdateList.swift in Sources */,
