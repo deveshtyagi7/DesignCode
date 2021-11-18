@@ -12,10 +12,13 @@ struct CourseList: View {
     @State var active = false
     @State var activeIndex = -1
     @State var activeView = CGSize.zero
+    
     var body: some View {
         ZStack {
-            Color.black.opacity(activeView.height / 500)
+            Color.black.opacity(Double(activeView.height/500))
+                .animation(.linear)
                 .edgesIgnoringSafeArea(.all)
+            
             ScrollView {
                 VStack(spacing: 30) {
                     Text("Courses")
@@ -31,7 +34,7 @@ struct CourseList: View {
                                 show: $courses[index].show,
                                 course: courses[index],
                                 active: $active,
-                                index : index,
+                                index: index,
                                 activeIndex: $activeIndex,
                                 activeView: $activeView
                             )
@@ -66,7 +69,7 @@ struct CourseView: View {
     @Binding var active: Bool
     var index: Int
     @Binding var activeIndex: Int
-    @Binding var activeView : CGSize
+    @Binding var activeView: CGSize
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -122,68 +125,67 @@ struct CourseView: View {
             }
             .padding(show ? 30 : 20)
             .padding(.top, CGFloat(show ? 30 : 0))
-            //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
+    //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
             .frame(maxWidth: CGFloat(show ? .infinity : screen.width - 60), maxHeight: CGFloat(show ? 460 : 280))
-            .background(Color(course.color))
+                .background(Color(course.color))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
+                .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
             .gesture(
-               // show ?
-                DragGesture().onChanged{ value in
+                show ?
+                DragGesture().onChanged { value in
                     guard value.translation.height < 300 else { return }
                     guard value.translation.height > 0 else { return }
+                    
                     activeView = value.translation
-                    
-                    
                 }
-                    .onEnded{ value in
-                        if activeView.height > 50 {
-                            show = false
-                            active = false
-                            activeIndex = -1
-                        }else {
-                            activeView = .zero
-                        }
-                        
-                    }
-               // : nil
-                
-            )
-            .onTapGesture {
-                show.toggle()
-                active.toggle()
-                
-                if show {
-                    activeIndex = index
-                }else {
-                    activeIndex = -1
-                }
-            }
-        }
-        .frame(height: show ? screen.height : 280)
-        .scaleEffect(1 - activeView.height / 1000)
-        .rotation3DEffect(Angle(degrees: Double(activeView.height / 10)), axis: (x: 0 , y: 10.0, z: 0))
-        .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
-        .gesture(
-            //show ?
-            DragGesture().onChanged{ value in
-                guard value.translation.height < 300 else  { return }
-                guard value.translation.height > 0 else { return }
-                activeView = value.translation
-
-            }
-                .onEnded{ value in
+                .onEnded { value in
                     if activeView.height > 50 {
                         show = false
                         active = false
                         activeIndex = -1
-                    }else {
-                        activeView = .zero
                     }
-                    
+                    activeView = .zero
                 }
-           // : nil
-            
+                : nil
+            )
+            .onTapGesture {
+                show.toggle()
+                active.toggle()
+                if show {
+                    activeIndex = index
+                } else {
+                    activeIndex = -1
+                }
+            }
+            //33 Dynamic New view
+            if show {
+//                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+//                    .background(Color.white)
+//                    .animation(nil)
+            }
+        }
+        .frame(height: show ? screen.height : 280)
+        .scaleEffect(1 - activeView.height / 1000)
+        .rotation3DEffect(Angle(degrees: Double(activeView.height / 10)), axis: (x: 0, y: 10.0, z: 0))
+        .hueRotation(Angle(degrees: Double(activeView.height)))
+        .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+        .gesture(
+            show ?
+            DragGesture().onChanged { value in
+                guard value.translation.height < 300 else { return }
+                guard value.translation.height > 0 else { return }
+                
+                activeView = value.translation
+            }
+            .onEnded { value in
+                if activeView.height > 50 {
+                    show = false
+                    active = false
+                    activeIndex = -1
+                }
+                activeView = .zero
+            }
+            : nil
         )
         .edgesIgnoringSafeArea(.all)
     }

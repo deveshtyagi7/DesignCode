@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102175AE2743B0F500789305 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102175AD2743B0F400789305 /* CourseDetail.swift */; };
 		102D93DF2730094700130DA0 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D93DE2730094700130DA0 /* UpdateStore.swift */; };
 		102D93E12730111B00130DA0 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D93E02730111B00130DA0 /* TabBar.swift */; };
 		102D93E32731024E00130DA0 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D93E22731024D00130DA0 /* RingView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102175AD2743B0F400789305 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		102D93DE2730094700130DA0 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		102D93E02730111B00130DA0 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		102D93E22731024D00130DA0 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				105D367727291FA900DE267F /* Home.swift */,
 				10E9F02F27296DC10030E62B /* HomeView.swift */,
 				106CBCF42737E30B0060E991 /* CourseList.swift */,
+				102175AD2743B0F400789305 /* CourseDetail.swift */,
 				106CBCF22737CD990060E991 /* WorkSans-Bold.ttf */,
 				106CBCF32737CD9F0060E991 /* WorkSans-Regular.ttf */,
 				1053E1BF2726859D0080737F /* Assets.xcassets */,
@@ -187,6 +190,7 @@
 				108FA5C1272FFAFE000F5EC5 /* UpdateList.swift in Sources */,
 				102D93DF2730094700130DA0 /* UpdateStore.swift in Sources */,
 				105D367827291FA900DE267F /* Home.swift in Sources */,
+				102175AE2743B0F500789305 /* CourseDetail.swift in Sources */,
 				10E9F03027296DC10030E62B /* HomeView.swift in Sources */,
 				1053E1BC272685980080737F /* DesignCodeApp.swift in Sources */,
 			);
