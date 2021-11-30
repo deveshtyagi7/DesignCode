@@ -13,6 +13,7 @@
 		102D93DF2730094700130DA0 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D93DE2730094700130DA0 /* UpdateStore.swift */; };
 		102D93E12730111B00130DA0 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D93E02730111B00130DA0 /* TabBar.swift */; };
 		102D93E32731024E00130DA0 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102D93E22731024D00130DA0 /* RingView.swift */; };
+		10488E71275647C4005E9505 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10488E70275647C4005E9505 /* DataStore.swift */; };
 		1053E1BC272685980080737F /* DesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053E1BB272685980080737F /* DesignCodeApp.swift */; };
 		1053E1BE272685980080737F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1053E1BD272685980080737F /* ContentView.swift */; };
 		1053E1C02726859D0080737F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1053E1BF2726859D0080737F /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		102D93DE2730094700130DA0 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		102D93E02730111B00130DA0 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		102D93E22731024D00130DA0 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		10488E70275647C4005E9505 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = ../../../../Documents/DataStore.swift; sourceTree = "<group>"; };
 		1053E1B8272685980080737F /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1053E1BB272685980080737F /* DesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeApp.swift; sourceTree = "<group>"; };
 		1053E1BD272685980080737F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		1053E1AF272685980080737F = {
 			isa = PBXGroup;
 			children = (
+				10488E70275647C4005E9505 /* DataStore.swift */,
 				1053E1BA272685980080737F /* DesignCode */,
 				1053E1B9272685980080737F /* Products */,
 			);
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				102D93E32731024E00130DA0 /* RingView.swift in Sources */,
+				10488E71275647C4005E9505 /* DataStore.swift in Sources */,
 				1011B4272756345700733168 /* PostList.swift in Sources */,
 				106CBCEC2737ACE50060E991 /* Modifiers.swift in Sources */,
 				102D93E12730111B00130DA0 /* TabBar.swift in Sources */,
